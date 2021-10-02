@@ -15,6 +15,7 @@ function wooe_dynamic_css() {
 			--wooe-primary-menu-highlight-color: #ff4e00;
 			--wooe-secondary-menu-color: #888888;
 
+			--wooe-header-search-height: 40px;
 			--wooe-nav-drop-width: 180px;
 			--wooe-nav-drop-bg: #ffffff;
 			--wooe-nav-drop-item-pad: 5px 15px;

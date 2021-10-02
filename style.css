@@ -228,6 +228,7 @@ input[type="color"]:focus,
 .wooe-header-search input[type="text"],
 .wooe-header-search .wooe-header-search-submit {
 	background-color: var(--wooe-header-search-bg);
+	height: var(--wooe-header-search-height);
 }
 .wooe-header-search .wooe-header-search-submit {
 	color: var(--wooe-primary-color);
@@ -250,8 +251,8 @@ input[type="color"]:focus,
 	--mb-bar-width: 0.5;
 	--mb-bar-height: 4px;
 	--mb-bar-spacing: 6px;
-	width: 40px;
-	height: 40px;
+	width: var(--wooe-header-search-height);
+	height: var(--wooe-header-search-height);
 	--mb-bar-height: 2px;
 	background-color: #ffffff;
 	color: #333333;
