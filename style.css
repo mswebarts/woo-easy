@@ -357,6 +357,11 @@ ul#wooe-primary-nav {
 	display: block;
 	text-decoration: none;
 }
+.wooe-primary-nav > li > a:hover,
+#wooe-primary-more-nav > li > a:hover {
+	color: var(--wooe-highlight-color);
+	opacity: 1;
+}
 .wooe-primary-nav > li:first-child > a {
 	padding-left: 0;
 }
