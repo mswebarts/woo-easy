@@ -120,16 +120,6 @@
 						<div class="row">
 							<div class="col-md-9">
 								<div class="wooe-header-nav-left wooe-primary-nav-wrapper" id="wooe-primary-nav-wrapper">
-									<?php
-										$args = array(
-											"theme_location" => "primary-menu",
-											"container"      => false,
-											"menu_class"     => "wooe-primary-nav",
-											"menu_id"        => "wooe-primary-nav",
-											"fallback_cb"    => "wooe_primary_menu_fallback"
-										);
-										wp_nav_menu( $args );
-									?>
 
 									<ul id="wooe-primary-more-nav">
 										<li>
