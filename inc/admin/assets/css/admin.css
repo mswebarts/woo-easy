@@ -163,3 +163,6 @@ label.cb-disable {
 .toplevel_page_wooe-options #wpcontent {
 	background-color: rgb(35, 40, 45);
 }
+.redux-section-field > h3 {
+	color: #ffffff;
+}
