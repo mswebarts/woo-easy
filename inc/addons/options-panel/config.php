@@ -288,22 +288,14 @@
         'title'            => __( 'CSS/Scripts Related', 'woo-easy' ),
         'id'               => 'css-scripts-settings',
         'subsection'       => true,
-        'desc'             => __( 'General Theme settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-cog'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Test', 'woo-easy' ),
-        'id'               => 'test-settings',
-        'subsection'       => true,
-        'desc'             => __( 'General Theme settings live here', 'woo-easy' ),
+        'desc'             => __( 'Custom CSS/JS and other scripts can be added here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-cog'
     ) );
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Accent Colors', 'woo-easy' ),
         'id'               => 'colors-settings',
-        'desc'             => __( 'Typography settings live here', 'woo-easy' ),
+        'desc'             => __( 'All the theme colors can be configured here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-brush'
     ) );
@@ -343,42 +335,6 @@
                 'default'  => true,
             ),
         )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Footer', 'woo-easy' ),
-        'id'               => 'footer-settings',
-        'desc'             => __( 'Footer settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-fork'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Page', 'woo-easy' ),
-        'id'               => 'page-settings',
-        'desc'             => __( 'Page settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-file'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Blog', 'woo-easy' ),
-        'id'               => 'blog-settings',
-        'desc'             => __( 'Blog settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-book'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Single Post', 'woo-easy' ),
-        'id'               => 'single-blog-settings',
-        'desc'             => __( 'Single blog post settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-compass'
-    ) );
-    Redux::setSection( $opt_name, array(
-        'title'            => __( 'Typography', 'woo-easy' ),
-        'id'               => 'typography-settings',
-        'desc'             => __( 'Typography settings live here', 'woo-easy' ),
-        'customizer_width' => '400px',
-        'icon'             => 'el el-font'
     ) );
 
 
