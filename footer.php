@@ -1,3 +1,3 @@
 <?php
 
-require( get_parent_theme_file_uri( '/template-parts/footer/footer-default.php' ) );
+require_once( get_parent_theme_file_path( '/template-parts/footer/footer-default.php' ) );
