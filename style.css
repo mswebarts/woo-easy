@@ -233,6 +233,9 @@ input[type="color"]:focus,
 .wooe-header-search .wooe-header-search-submit {
 	color: var(--wooe-primary-color);
 }
+.wooe-header-search .wooe-header-search-submit:hover {
+	opacity: 1;
+}
 .wooe-header-action-buttons li {
 	padding: 0;
 	padding-right: 15px;
