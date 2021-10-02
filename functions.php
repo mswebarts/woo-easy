@@ -2,4 +2,4 @@
 
 // load the initiation files
 
-require( dirname(__FILE__) . '/inc/init.php' );
+require_once( get_parent_theme_file_uri('/inc/init.php') );
