@@ -1,0 +1,5 @@
+The textdomain is : woo-easy
+The prefix is     : wooe
+
+replaceable text: Woo Easy, wooe, wooe-options
+replaceable dir: classes/wooe-tgm.php

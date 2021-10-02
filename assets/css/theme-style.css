@@ -1,0 +1,111 @@
+:root {
+	--wooe-light-color: #ffffff;
+	--wooe-dark-color: #333333;
+	--wooe-primary-color: #4285f4;
+	--wooe-secondary-color: #02a95b;
+	--wooe-highlight-color: #ff4e00;
+	--wooe-header-search-bg: #ffffff;
+
+	--wooe-primary-menu-color: #4285f4;
+	--wooe-primary-menu-highlight-color: #ff4e00;
+	--wooe-secondary-menu-color: #888888;
+
+	--wooe-nav-drop-width: 180px;
+	--wooe-nav-drop-bg: #ffffff;
+	--wooe-nav-drop-item-pad: 5px 15px;
+	--wooe-nav-more-drop-item-pad: 5px 15px 5px 20px;
+
+	/* product card*/
+	--wooe-product-card-title-color: #4285f4;
+
+	/*footer*/
+	--wooe-footer-widget-bg: #f2f8ff;
+
+	--wooe-footer-menu-color: #333333;
+	--wooe-footer-menu-hover-color: #555555;
+}
+/*********************
+    header styles
+**********************/
+
+.wooe-header .wooe-logo img {
+	height: 40px;
+}
+.wooe-header-mid {
+	background: #273444;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.wooe-header-action-buttons li i {
+	font-size: 25px;
+}
+.wooe-header-action-buttons li i[class*="down"] {
+	font-size: 14px;
+}
+.wooe-header-action-buttons li {
+	color: var(--wooe-light-color);
+}
+/* header bottom */
+.wooe-header-bottom-info {
+	font-size: 14px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.wooe-header-bottom-info .wooe-header-bottom-info-item {
+	padding: 0 10px;
+	width: auto;
+}
+
+/* default section heading */
+
+.wooe-section-heading {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	font-weight: 700;
+	font-family: BeVietnamPro, sans-serif;
+}
+
+/*************************************
+			Footer
+*************************************/
+.wooe-space-above-footer {
+	display: block;
+	height: 40px;
+}
+.wooe-footer-widget-area {
+	padding-top: 50px;
+	padding-right: 0;
+	padding-bottom: 50px;
+	padding-left: 0;
+	font-size: 14px;
+}
+.footer .widgettitle {
+	font-size: 18px;
+	font-weight: 600;
+}
+.wooe-footer-widget-area a {
+	color: #000000;
+}
+.wooe-footer-widget-area a:hover {
+	opacity: 0.8;
+}
+
+.wooe-footer-payment-icons ul li {
+	margin-right: 20px; /*space between icons*/
+}
+.wooe-footer-payment-icons img {
+	width: 40px;
+	height: auto;
+}
+
+/* footer menu */
+
+.wooe-footer-nav-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.wooe-footer-nav li {
+	margin-right: 20px; /*space between menus*/
+}
