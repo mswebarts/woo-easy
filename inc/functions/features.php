@@ -40,4 +40,28 @@ function wooe_primary_menu_fallback() {
 		?>
 	</ul>
 	<?php
-  }
+}
+
+// fallback for mobile menu location
+function wooe_mobile_menu_fallback() {
+	?>
+	<ul class="wooe-primary-nav-mbl" id="wooe-primary-nav-mbl">
+		<li class="menu-item">
+			<a href="<?php esc_url(home_url()); ?>">
+				<?php echo esc_html_e( "Home", "woo-easy" ); ?>
+			</a>
+		</li>
+		<?php
+		if( current_user_can( 'administrator' ) ){
+			?>
+				<li class="menu-item">
+					<a href="<?php echo esc_url( home_url() . '/wp-admin/nav-menus.php' ); ?>">
+						<?php echo esc_html_e( "Set mobile menu", "woo-easy" ); ?>
+					</a>
+				</li>
+			<?php
+		}
+		?>
+	</ul>
+	<?php
+}

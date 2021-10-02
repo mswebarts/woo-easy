@@ -164,7 +164,7 @@
 							"container"      => false,
 							"menu_class"     => "wooe-primary-nav-mbl",
 							"menu_id"        => "wooe-primary-nav-mbl",
-							"fallback_cb"    => "wooe_primary_menu_fallback"
+							"fallback_cb"    => "wooe_mobile_menu_fallback"
 						);
 						wp_nav_menu( $args );
 					?>
