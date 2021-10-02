@@ -420,7 +420,7 @@ ul.wooe-primary-nav .sub-menu li.menu-item-has-children > a::after,
 .wooe-primary-nav > li.menu-item-has-children > a::after {
 	content: "\f078";
 }
-.wooe-primary-nav > li.menu-item-has-children li.menu-item-has-children a::after {
+.wooe-primary-nav > li.menu-item-has-children li.menu-item-has-children > a::after {
 	content: "\f054";
 	font-size: 14px;
 	right: 5px;
