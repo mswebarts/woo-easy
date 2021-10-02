@@ -272,7 +272,7 @@ input[type="color"]:focus,
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 99;
+	z-index: 99999;
 	width: 100%;
 	-webkit-animation: wooe-header-sticky-animation 2s ease-in-out;
 	animation: wooe-header-sticky-animation 500ms ease-in-out;
