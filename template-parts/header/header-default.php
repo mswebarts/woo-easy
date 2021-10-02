@@ -120,6 +120,16 @@
 						<div class="row">
 							<div class="col-md-9">
 								<div class="wooe-header-nav-left wooe-primary-nav-wrapper" id="wooe-primary-nav-wrapper">
+									<?php
+										$args = array(
+											"theme_location" => "primary-menu",
+											"container"      => false,
+											"menu_class"     => "wooe-primary-nav",
+											"menu_id"        => "wooe-primary-nav",
+											"fallback_cb"    => "wooe_primary_menu_fallback"
+										);
+										wp_nav_menu( $args );
+									?>
 
 									<ul id="wooe-primary-more-nav">
 										<li>
@@ -131,11 +141,16 @@
 							</div>
 							<div class="col-md-3">
 								<div class="wooe-header-nav-right">
-									<ul class="wooe-secondary-nav">
-										<li class="menu-item">
-											<a href="#">Customer Support</a>
-										</li>
-									</ul>
+									<?php
+										$args = array(
+											"theme_location" => "header-right-menu",
+											"container"      => false,
+											"menu_class"     => "wooe-secondary-nav",
+											"depth"          => 1,
+											"fallback_cb"    => false
+										);
+										wp_nav_menu( $args );
+									?>
 								</div>
 							</div>
 						</div>
@@ -143,81 +158,16 @@
 				</div>
 
 				<nav class="wooe-header-nav-mbl" id="wooe-header-nav-mbl">
-					<ul class="wooe-primary-nav-mbl" id="wooe-primary-nav-mbl">
-						<li class="menu-item menu-item-has-children active">
-							<a href="#">Sport bands</a>
-							<ul class="sub-menu">
-								<li class="menu-item menu-item-has-children">
-									<a href="#">Menu item</a>
-
-									<ul class="sub-menu">
-										<li class="menu-item"><a href="#">Menu item</a></li>
-										<li class="menu-item"><a href="#">Menu item</a></li>
-										<li class="menu-item"><a href="#">Menu item</a></li>
-										<li class="menu-item"><a href="#">Menu item</a></li>
-										<li class="menu-item"><a href="#">Menu item</a></li>
-									</ul>
-								</li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-							</ul>
-						</li>
-						<li class="menu-item">
-							<a href="#">Milanese bands</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Steel bands</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Nylon bands</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Sale</a>
-						</li>
-						<li class="menu-item menu-item-has-children">
-							<a href="#">Nylon bands</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-							</ul>
-						</li>
-						<li class="menu-item">
-							<a href="#">Sale</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Nylon bands</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Sale</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Nylon bands</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Sale</a>
-						</li>
-						<li class="menu-item">
-							<a href="#">Nylon bands</a>
-						</li>
-						<li class="menu-item menu-item-has-children active">
-							<a href="#">Sport bands</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-								<li class="menu-item"><a href="#">Menu item</a></li>
-							</ul>
-						</li>
-						<li class="menu-item">
-							<a href="#">Sale</a>
-						</li>
-					</ul>
+					<?php
+						$args = array(
+							"theme_location" => "mobile-menu",
+							"container"      => false,
+							"menu_class"     => "wooe-primary-nav-mbl",
+							"menu_id"        => "wooe-primary-nav-mbl",
+							"fallback_cb"    => "wooe_primary_menu_fallback"
+						);
+						wp_nav_menu( $args );
+					?>
 				</nav>
 
 				<div class="wooe-header-bottom-info">

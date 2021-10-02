@@ -113,13 +113,15 @@
 				</div>
 				<hr />
 				<div class="wooe-footer-nav-container">
-					<ul class="wooe-footer-nav">
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms</a></li>
-						<li><a href="#">Help</a></li>
-						<li><a href="#">About us</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
+					<?php
+						$args = array(
+							"theme_location" => "footer-menu",
+							"container"      => false,
+							"menu_class"     => "wooe-footer-nav",
+							"fallback_cb"    => false
+						);
+						wp_nav_menu( $args );
+					?>
 					<span class="wooe-copyright-text">©2021 MS Web Arts</span>
 				</div>
 			</footer>
