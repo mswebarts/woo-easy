@@ -811,4 +811,5 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 }
 .wooe-footer-nav li a:hover {
 	color: var(--wooe-footer-menu-hover-color);
+	opacity: 1;
 }
