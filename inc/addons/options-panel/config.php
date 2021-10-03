@@ -410,6 +410,17 @@
                 'validate'    => 'color',
             ),
             array(
+                'id'          => 'wooe-dropdown-menu-color-hover',
+                'type'        => 'select',
+                'title'       => __('Menu dropdown hover color', 'woo-easy'), 
+                'subtitle'    => __('Select hover color for the dropdown menus (default: #ffffff).', 'woo-easy'),
+                'options'  => array(
+                    'light' => 'Light',
+                    'dark' => 'Dark'
+                ),
+                'default'     => 'light',
+            ),
+            array(
                 'id'          => 'wooe-secondary-menu-color',
                 'type'        => 'color',
                 'title'       => __('Header right menu color', 'woo-easy'), 

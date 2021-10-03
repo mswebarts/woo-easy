@@ -51,6 +51,18 @@ function wooe_dynamic_css() {
 		.wooe-header-action-buttons li {
 			color: var(--wooe-light-color);
 		}
+		<?php if( $wooe_options['wooe-dropdown-menu-color-hover'] == 'light' ): ?>
+		.wooe-primary-nav ul.sub-menu li a:hover,
+		.wooe-primary-nav-subfilter li a:hover {
+			color: var(--wooe-light-color);
+		}
+		<?php else: ?>
+		.wooe-primary-nav ul.sub-menu li a:hover,
+		.wooe-primary-nav-subfilter li a:hover {
+			color: var(--wooe-dark-color);
+		}
+		<?php endif; ?>
+
 		/* header bottom */
 		.wooe-header-bottom-info {
 			font-size: 14px;
