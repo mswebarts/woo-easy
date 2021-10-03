@@ -381,7 +381,15 @@
                 'subtitle' => __('Configure the header menu colors', 'redux-framework-demo'),
                 'indent' => false 
             ),
-            
+            array(
+                'id'          => 'wooe-menu-bar-bg',
+                'type'        => 'color',
+                'title'       => __('Menu bar background color', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for the menu bar (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
             array(
                 'id'          => 'wooe-primary-menu-color',
                 'type'        => 'color',
@@ -451,6 +459,24 @@
                 'title'       => __('Widget area background color', 'woo-easy'), 
                 'subtitle'    => __('Pick a background color for the widget area in the footer area (default: #f2f8ff).', 'woo-easy'),
                 'default'     => '#f2f8ff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-footer-payment-bg',
+                'type'        => 'color',
+                'title'       => __('Footer payment bar background', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for the footer payment bar (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-footer-menu-bg',
+                'type'        => 'color',
+                'title'       => __('Footer menu background color', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for the footer menu (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
                 'transparent' => false,
                 'validate'    => 'color',
             ),

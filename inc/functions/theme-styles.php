@@ -42,6 +42,9 @@ function wooe_dynamic_css() {
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
+		.wooe-header-nav {
+			background-color: <?php echo esc_html( $wooe_options['wooe-menu-bar-bg'] ) ?>;
+		}
 		.wooe-header-action-buttons li i {
 			font-size: 25px;
 		}
@@ -109,7 +112,9 @@ function wooe_dynamic_css() {
 		.wooe-footer-widget-area a:hover {
 			opacity: 0.8;
 		}
-
+		.wooe-footer-payment-icons {
+			background-color: <?php echo esc_html( $wooe_options['wooe-footer-payment-bg'] ) ?>;
+		}
 		.wooe-footer-payment-icons ul li {
 			margin-right: 20px; /*space between icons*/
 		}
@@ -121,8 +126,11 @@ function wooe_dynamic_css() {
 		/* footer menu */
 
 		.wooe-footer-nav-container {
-			margin-top: 20px;
-			margin-bottom: 20px;
+			padding-top: 15px;
+			padding-right: 15px;
+			padding-bottom: 15px;
+			padding-left: 15px;
+			background-color: <?php echo esc_html( $wooe_options['wooe-footer-menu-bg'] ) ?>;
 		}
 		.wooe-footer-nav li {
 			margin-right: 20px; /*space between menus*/
