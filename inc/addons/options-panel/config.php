@@ -294,11 +294,176 @@
     ) );
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Accent Colors', 'woo-easy' ),
-        'id'               => 'colors-settings',
+        'id'               => 'color-settings',
         'desc'             => __( 'All the theme colors can be configured here', 'woo-easy' ),
         'customizer_width' => '400px',
-        'icon'             => 'el el-brush'
+        'icon'             => 'el el-brush',
+        'fields'           => array(
+            array(
+                'id'          => 'wooe-primary-color',
+                'type'        => 'color',
+                'title'       => __('Primary Color', 'woo-easy'), 
+                'subtitle'    => __('Pick a primary color for the site (default: #4285f4).', 'woo-easy'),
+                'default'     => '#4285f4',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-secondary-color',
+                'type'        => 'color',
+                'title'       => __('Secondary Color', 'woo-easy'), 
+                'subtitle'    => __('Pick a secondary color for the site (default: #02a95b).', 'woo-easy'),
+                'default'     => '#02a95b',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-highlight-color',
+                'type'        => 'color',
+                'title'       => __('Highlight Color', 'woo-easy'), 
+                'subtitle'    => __('Pick a highlight color for the site (default: #ff4e00).', 'woo-easy'),
+                'default'     => '#ff4e00',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-light-color',
+                'type'        => 'color',
+                'title'       => __('Light Color', 'woo-easy'), 
+                'subtitle'    => __('Pick a light color for the site (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-dark-color',
+                'type'        => 'color',
+                'title'       => __('Dark Color', 'woo-easy'), 
+                'subtitle'    => __('Pick a dark color for the site (default: #333333).', 'woo-easy'),
+                'default'     => '#333333',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+        ),
     ) );
+
+    
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Header Colors', 'woo-easy' ),
+        'id'               => 'color-header-settings',
+        'desc'             => __( 'Header settings live here', 'woo-easy' ),
+        'customizer_width' => '400px',
+        'icon'             => 'el el-lines',
+        'subsection'       => true,
+        'fields'           => array(
+            array(
+                'id'          => 'wooe-header-mid-bg',
+                'type'        => 'color',
+                'title'       => __('Header mid bar', 'woo-easy'), 
+                'subtitle'    => __('Pick a color for the header mid bar or the logo bar (default: #273444).', 'woo-easy'),
+                'default'     => '#273444',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-header-search-bg',
+                'type'        => 'color',
+                'title'       => __('Header search background color', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for the header search field (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id' => 'section-start',
+                'type' => 'section',
+                'title' => __('Menu colors', 'redux-framework-demo'),
+                'subtitle' => __('Configure the header menu colors', 'redux-framework-demo'),
+                'indent' => false 
+            ),
+            
+            array(
+                'id'          => 'wooe-primary-menu-color',
+                'type'        => 'color',
+                'title'       => __('Primary menu color', 'woo-easy'), 
+                'subtitle'    => __('Pick a color for the primary menu items (default: #4285f4).', 'woo-easy'),
+                'default'     => '#4285f4',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-primary-menu-highlight-color',
+                'type'        => 'color',
+                'title'       => __('Primary menu highlight color', 'woo-easy'), 
+                'subtitle'    => __('Pick a hover or active color for the primary menu items (default: #ff4e00).', 'woo-easy'),
+                'default'     => '#ff4e00',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-dropdown-menu-bg-color',
+                'type'        => 'color',
+                'title'       => __('Primary menu dropdown background', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for dropdown menus (default: #ffffff).', 'woo-easy'),
+                'default'     => '#ffffff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-secondary-menu-color',
+                'type'        => 'color',
+                'title'       => __('Header right menu color', 'woo-easy'), 
+                'subtitle'    => __('Pick a color for the header right menu items (default: #888888).', 'woo-easy'),
+                'default'     => '#888888',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+
+            array(
+                'id'     => 'section-end',
+                'type'   => 'section',
+                'indent' => false,
+            ),
+        )
+    ) );
+    Redux::setSection( $opt_name, array(
+        'title'            => __( 'Footer Colors', 'woo-easy' ),
+        'id'               => 'color-footer-settings',
+        'desc'             => __( 'Configure the footer related colors here', 'woo-easy' ),
+        'customizer_width' => '400px',
+        'icon'             => 'el el-lines',
+        'subsection'       => true,
+        'fields'           => array(
+            array(
+                'id'          => 'wooe-footer-widget-bg',
+                'type'        => 'color',
+                'title'       => __('Widget area background color', 'woo-easy'), 
+                'subtitle'    => __('Pick a background color for the widget area in the footer area (default: #f2f8ff).', 'woo-easy'),
+                'default'     => '#f2f8ff',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-footer-menu-color',
+                'type'        => 'color',
+                'title'       => __('Footer menu color', 'woo-easy'), 
+                'subtitle'    => __('Pick a color for the footer menu links (default: #333333).', 'woo-easy'),
+                'default'     => '#333333',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+            array(
+                'id'          => 'wooe-footer-menu-color-hover',
+                'type'        => 'color',
+                'title'       => __('Footer menu hover color', 'woo-easy'), 
+                'subtitle'    => __('Pick a color for the hover state of the footer menu links (default: #555555).', 'woo-easy'),
+                'default'     => '#555555',
+                'transparent' => false,
+                'validate'    => 'color',
+            ),
+        )
+    ) );
+
     Redux::setSection( $opt_name, array(
         'title'            => __( 'Header', 'woo-easy' ),
         'id'               => 'header-settings',

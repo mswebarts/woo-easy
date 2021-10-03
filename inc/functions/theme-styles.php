@@ -4,20 +4,20 @@ function wooe_dynamic_css() {
 	?>
 	<style type="text/css">
 		:root {
-			--wooe-light-color: #ffffff;
-			--wooe-dark-color: #333333;
-			--wooe-primary-color: #4285f4;
-			--wooe-secondary-color: #02a95b;
-			--wooe-highlight-color: #ff4e00;
-			--wooe-header-search-bg: #ffffff;
+			--wooe-light-color: <?php echo esc_html( $wooe_options['wooe-light-color'] ) ?>;
+			--wooe-dark-color: <?php echo esc_html( $wooe_options['wooe-dark-color'] ) ?>;
+			--wooe-primary-color: <?php echo esc_html( $wooe_options['wooe-primary-color'] ) ?>;
+			--wooe-secondary-color: <?php echo esc_html( $wooe_options['wooe-secondary-color'] ) ?>;
+			--wooe-highlight-color: <?php echo esc_html( $wooe_options['wooe-highlight-color'] ) ?>;
+			--wooe-header-search-bg: <?php echo esc_html( $wooe_options['wooe-header-search-bg'] ) ?>;
 
-			--wooe-primary-menu-color: #4285f4;
-			--wooe-primary-menu-highlight-color: #ff4e00;
-			--wooe-secondary-menu-color: #888888;
+			--wooe-primary-menu-color: <?php echo esc_html( $wooe_options['wooe-primary-menu-color'] ) ?>;
+			--wooe-primary-menu-highlight-color: <?php echo esc_html( $wooe_options['wooe-primary-menu-highlight-color'] ) ?>;
+			--wooe-nav-drop-bg: <?php echo esc_html( $wooe_options['wooe-dropdown-menu-bg-color'] ) ?>;
+			--wooe-secondary-menu-color: <?php echo esc_html( $wooe_options['wooe-secondary-menu-color'] ) ?>;
 
 			--wooe-header-search-height: 40px;
 			--wooe-nav-drop-width: 180px;
-			--wooe-nav-drop-bg: #ffffff;
 			--wooe-nav-drop-item-pad: 5px 15px;
 			--wooe-nav-more-drop-item-pad: 5px 15px 5px 20px;
 
@@ -25,10 +25,10 @@ function wooe_dynamic_css() {
 			--wooe-product-card-title-color: #4285f4;
 
 			/*footer*/
-			--wooe-footer-widget-bg: #f2f8ff;
+			--wooe-footer-widget-bg: <?php echo esc_html( $wooe_options['wooe-footer-widget-bg'] ) ?>;
 
-			--wooe-footer-menu-color: #333333;
-			--wooe-footer-menu-hover-color: #555555;
+			--wooe-footer-menu-color: <?php echo esc_html( $wooe_options['wooe-footer-menu-color'] ) ?>;
+			--wooe-footer-menu-hover-color: <?php echo esc_html( $wooe_options['wooe-footer-menu-color-hover'] ) ?>;
 		}
 		/*********************
 			header styles
@@ -38,7 +38,7 @@ function wooe_dynamic_css() {
 			height: 40px;
 		}
 		.wooe-header-mid {
-			background: #273444;
+			background-color: <?php echo esc_html( $wooe_options['wooe-header-mid-bg'] ) ?>;
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
