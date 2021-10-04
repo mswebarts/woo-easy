@@ -16,7 +16,7 @@ function wooe_dynamic_css() {
 			--wooe-nav-drop-bg: <?php echo esc_html( $wooe_options['wooe-dropdown-menu-bg-color'] ) ?>;
 			--wooe-secondary-menu-color: <?php echo esc_html( $wooe_options['wooe-secondary-menu-color'] ) ?>;
 
-			--wooe-header-search-height: 40px;
+			--wooe-header-search-height: <?php echo esc_html( $wooe_options['wooe-header-bar-height'] ) ?>;
 			--wooe-nav-drop-width: 180px;
 			--wooe-nav-drop-item-pad: 5px 15px;
 			--wooe-nav-more-drop-item-pad: 5px 15px 5px 20px;

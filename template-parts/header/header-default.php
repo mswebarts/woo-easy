@@ -1,3 +1,5 @@
+<?php global $wooe_options; ?>
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -12,8 +14,17 @@
 			<header class="wooe-header wooe-header-one">
 				<div class="wooe-header-mid wooe-header-mid-text-light" id="wooe-header-mid">
 					<div class="container">
-						<div class="row align-items-center">
+						<div class="row align-items-center justify-content-between">
 							<div class="col-6 col-sm-6 col-md-3 col-lg-3 order-0 order-sm-0 order-md-0 order-lg-0">
+
+								<?php if( $wooe_options['wooe-show-header-search'] == false ) : ?>
+									<a href="#wooe-header-nav-mbl" class="wooe-mobile-hamburger mburger mburger--spin d-inline-block d-sm-inline-block d-md-none d-lg-none">
+										<b></b>
+										<b></b>
+										<b></b>
+									</a>
+								<?php endif; ?>
+
 								<a href="<?php echo esc_url(home_url()); ?>" class="wooe-logo">
 									<?php
 										if ( has_custom_logo() ) {
@@ -26,23 +37,27 @@
 									?>
 								</a>
 							</div>
-							<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-2 order-sm-2 order-md-1 order-lg-1 mt-2 mt-sm-2 mt-md-0 mt-lg-0">
-								<div class="d-flex flex-nowrap">
-									<a href="#wooe-header-nav-mbl" class="wooe-mobile-hamburger mburger mburger--spin d-block d-sm-block d-md-none d-lg-none">
-										<b></b>
-										<b></b>
-										<b></b>
-									</a>
-									<div class="wooe-header-search w-100">
-										<div class="input-group w-100">
-											<input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon2" />
-											<button class="btn wooe-header-search-submit" type="button">
-												<i class="far fa-search"></i>
-											</button>
+
+							<?php if( $wooe_options['wooe-show-header-search'] == true ) : ?>
+								<div class="col-12 col-sm-12 col-md-6 col-lg-6 order-2 order-sm-2 order-md-1 order-lg-1 mt-2 mt-sm-2 mt-md-0 mt-lg-0">
+									<div class="d-flex flex-nowrap">
+										<a href="#wooe-header-nav-mbl" class="wooe-mobile-hamburger mburger mburger--spin d-block d-sm-block d-md-none d-lg-none">
+											<b></b>
+											<b></b>
+											<b></b>
+										</a>
+										<div class="wooe-header-search w-100">
+											<div class="input-group w-100">
+												<input type="text" class="form-control" placeholder="Search..." aria-label="Search..." aria-describedby="button-addon2" />
+												<button class="btn wooe-header-search-submit" type="button">
+													<i class="far fa-search"></i>
+												</button>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
+							<?php endif; ?>
+
 							<div class="col-6 col-sm-6 col-md-3 col-lg-3 order-1 order-sm-1 order-md-2 order-lg-2">
 								<div class="wooe-header-mid-right">
 									<ul class="wooe-header-action-buttons list-group list-group-horizontal justify-content-end">
