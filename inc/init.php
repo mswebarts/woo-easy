@@ -25,9 +25,6 @@ require_once( get_parent_theme_file_path('/inc/functions/woo-customizations.php'
 // load redux framework and demo import
 
 if( class_exists( 'Redux_Framework_Plugin' ) ) {
-	require_once( get_parent_theme_file_path('/inc/addons/options-panel/repeater/class-redux-extension-repeater.php') );
-	require_once( get_parent_theme_file_path('/inc/addons/options-panel/repeater/repeater/class-redux-repeater.php') );
-	
 	require_once( get_parent_theme_file_path('/inc/addons/options-panel/config.php') );
 }
 
