@@ -164,7 +164,7 @@ body.toplevel_page_wooe_options span.redux-repeater-header {
 }
 
 /* button colors */
-.toplevel_page_wooe_options .button:not(#contextual-help-link) {
+.toplevel_page_wooe_options .button.button-primary {
 	background-color: #0e77e0 !important;
 	color: #ffffff;
 }
