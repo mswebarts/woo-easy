@@ -377,8 +377,8 @@
             array(
                 'id' => 'section-start',
                 'type' => 'section',
-                'title' => esc_html__('Menu colors', 'redux-framework-demo'),
-                'subtitle' => esc_html__('Configure the header menu colors', 'redux-framework-demo'),
+                'title' => esc_html__('Menu colors', 'woo-easy'),
+                'subtitle' => esc_html__('Configure the header menu colors', 'woo-easy'),
                 'indent' => false 
             ),
             array(
@@ -530,7 +530,48 @@
             ),
         )
     ) );
-
+    
+    Redux::setSection( $opt_name, array(
+        'title'            => esc_html__( 'Footer', 'woo-easy' ),
+        'id'               => 'footer-settings',
+        'desc'             => esc_html__( 'Testing repeater extension', 'woo-easy' ),
+        'customizer_width' => '400px',
+        'icon'             => 'el el-lines',
+        'fields'           => array(
+            array(
+                'id'       => 'enable-payment-icons',
+                'type'     => 'switch', 
+                'title'    => __('Enable Payment Icons', 'woo-easy'),
+                'subtitle' => __('Turn on to enable the payment icons', 'woo-easy'),
+                'default'  => true,
+            ),
+            array(
+                'id'         => 'wooe-payment-icons',
+                'type'       => 'repeater',
+                'title'      => __( 'Payment Icons', 'woo-easy' ),
+                'subtitle'   => __( 'Add or remove payment icons in the footer area. You can sort them by dragging', 'woo-easy' ),
+                'desc'       => __( '', 'woo-easy' ),
+                'item_name'  => 'Payment Icon',
+                'bind_title' => true,
+                'sortable' => true,
+                'required'   => array( 'enable-payment-icons', 'equals', 1 ),
+                'fields'     => array(
+                    array(
+                        'id'       => 'wooe-payment-icon',
+                        'type'     => 'media', 
+                        'url'      => false,
+                        'title'    => __('Payment Icon', 'woo-easy'),
+                        'desc'     => __('Upload the icon or image. Transparent image in PNG format is recommended.', 'woo-easy'),
+                        'subtitle' => __('', 'woo-easy'),
+                        'default'  => array(
+                            'url'=>'http://s.wordpress.org/style/images/codeispoetry.png'
+                        ),
+                    ),
+                )
+            )
+        )
+    ) );
+    
 
 
     /*
