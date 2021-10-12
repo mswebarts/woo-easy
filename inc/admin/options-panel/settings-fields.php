@@ -1,5 +1,4 @@
 <?php
-
 Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'General Settings', 'woo-easy' ),
         'id'               => 'general-settings',
