@@ -1,3 +1,7 @@
+			<?php
+			global $wooe_options;
+			
+			?>			
 			<div class="wooe-space-above-footer"></div>
 			<footer class="footer wooe-footer-one">
 				<div class="wooe-footer-widget-area">
@@ -92,25 +96,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="wooe-footer-payment-icons">
-					<ul>
-						<li>
-							<img src="/assets/img/logo.png" />
-						</li>
-						<li>
-							<img src="/assets/img/logo.png" />
-						</li>
-						<li>
-							<img src="/assets/img/logo.png" />
-						</li>
-						<li>
-							<img src="/assets/img/logo.png" />
-						</li>
-						<li>
-							<img src="/assets/img/logo.png" />
-						</li>
-					</ul>
-				</div>
+
+				<?php 
+					if( $wooe_options["enable-payment-icons"] == true ) {
+						get_template_part( "/template-parts/footer/payment", "icons" );
+					}
+				?>
+				
 				<hr />
 				<div class="wooe-footer-nav-container">
 					<?php

@@ -769,13 +769,15 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 }
 
 /* payment icons */
-.wooe-footer-payment-icons {
-	padding: 15px 15px 15px 15px;
-}
 .wooe-footer-payment-icons ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 	list-style-type: none;
 	padding-left: 0;
-	text-align: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
 	margin-bottom: 0;
 }
 .wooe-footer-payment-icons ul li {

@@ -116,11 +116,13 @@ function wooe_dynamic_css() {
 			background-color: <?php echo esc_html( $wooe_options['wooe-footer-payment-bg'] ) ?>;
 		}
 		.wooe-footer-payment-icons ul li {
-			margin-right: 20px; /*space between icons*/
+			margin-right: <?php echo esc_html( $wooe_options['wooe-payment-icon-spacing'] ) ?>px;
 		}
 		.wooe-footer-payment-icons img {
-			width: 40px;
-			height: auto;
+			width: auto;
+		}
+		.wooe-footer-payment-icons ul {
+			justify-content: <?php echo esc_html( $wooe_options['wooe-payment-icon-alignment'] ) ?>;
 		}
 
 		/* footer menu */

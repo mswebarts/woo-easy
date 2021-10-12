@@ -291,6 +291,61 @@ Redux::set_section( $opt_name, array(
                         ),
                     ),
                 )
-            )
+            ),
+            array(
+                'id'       => 'wooe-payment-icon-dimension',
+                'type'     => 'dimensions',
+                'output'   => array('.wooe-footer-payment-icons img'),
+                'units'    => array( 'em','px' ),
+                'width'    => false,
+                'title'    => __('Payment Icon Width', 'woo-easy'),
+                'subtitle' => __('Set width for the icons', 'woo-easy'),
+                'desc'     => __( 'The height of the icon will be set to \'auto\' to keep the proportion of the icon'),
+                'required' => array( 'enable-payment-icons', 'equals', 1 ),
+                'default'  => array(
+                    'height'  => '40',
+                    'units'   => 'px', 
+                ),
+            ),
+            array(
+                'id'             => 'wooe-payment-area-padding',
+                'type'           => 'spacing',
+                'output'         => array('.wooe-footer-payment-icons'),
+                'mode'           => 'padding',
+                'units'          => array('em', 'px'),
+                'units_extended' => 'false',
+                'title'          => __('Payment Icon bar Padding', 'woo-easy'),
+                'subtitle'       => __('Add paddding to the payment icon bar area', 'woo-easy'),
+                'required' => array( 'enable-payment-icons', 'equals', 1 ),
+                'default'            => array(
+                    'padding-top'     => '15', 
+                    'padding-right'   => '15', 
+                    'padding-bottom'  => '15', 
+                    'padding-left'    => '15',
+                    'units'          => 'px', 
+                )
+            ),
+            array(
+                'id'       => 'wooe-payment-icon-spacing',
+                'type'     => 'text',
+                'title'    => __('Spacing Between Icons', 'woo-easy'),
+                'subtitle' => __('Specify spaces between the icons', 'woo-easy'),
+                'validate' => 'numeric',
+                'msg'      => 'Please enter a valid number',
+                'default'  => '20'
+            ),
+            array(
+                'id'       => 'wooe-payment-icon-alignment',
+                'type'     => 'select',
+                'title'    => __('Icon Alignment', 'woo-easy'),
+                'subtitle' => __('Select how the icons should be aligned', 'woo-easy'),
+                'msg'      => 'Please enter a valid number',
+                'options'  => array(
+                    'left'   => 'Left',
+                    'center' => 'Center',
+                    'right'  => 'Right'
+                ),
+                'default'  => 'center'
+            ),
         )
     ) );
