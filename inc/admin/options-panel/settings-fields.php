@@ -1,14 +1,12 @@
 <?php
 Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'General Settings', 'woo-easy' ),
-        'id'               => 'general-settings',
         'desc'             => esc_html__( 'General Theme settings live here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-cog'
     ) );
     Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'CSS/Scripts Related', 'woo-easy' ),
-        'id'               => 'css-scripts-settings',
         'subsection'       => true,
         'desc'             => esc_html__( 'Custom CSS/JS and other scripts can be added here', 'woo-easy' ),
         'customizer_width' => '400px',
@@ -16,7 +14,6 @@ Redux::set_section( $opt_name, array(
     ) );
     Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'Accent Colors', 'woo-easy' ),
-        'id'               => 'color-settings',
         'desc'             => esc_html__( 'All the theme colors can be configured here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-brush',
@@ -72,7 +69,6 @@ Redux::set_section( $opt_name, array(
     
     Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'Header Colors', 'woo-easy' ),
-        'id'               => 'color-header-settings',
         'desc'             => esc_html__( 'Header settings live here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-lines',
@@ -169,7 +165,6 @@ Redux::set_section( $opt_name, array(
     ) );
     Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'Footer Colors', 'woo-easy' ),
-        'id'               => 'color-footer-settings',
         'desc'             => esc_html__( 'Configure the footer related colors here', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-lines',
@@ -255,7 +250,6 @@ Redux::set_section( $opt_name, array(
     
     Redux::set_section( $opt_name, array(
         'title'            => esc_html__( 'Payments Icons', 'woo-easy' ),
-        'id'               => 'footer-payment-settings',
         'desc'             => esc_html__( 'Testing repeater extension', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-lines',
