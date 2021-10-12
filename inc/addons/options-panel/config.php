@@ -546,16 +546,17 @@
                 'default'  => true,
             ),
             array(
-                'id'         => 'wooe-payment-icons',
-                'type'       => 'repeater',
-                'title'      => __( 'Payment Icons', 'woo-easy' ),
-                'subtitle'   => __( 'Add or remove payment icons in the footer area. You can sort them by dragging', 'woo-easy' ),
-                'desc'       => __( '', 'woo-easy' ),
-                'item_name'  => 'Payment Icon',
-                'bind_title' => true,
-                'sortable' => true,
-                'required'   => array( 'enable-payment-icons', 'equals', 1 ),
-                'fields'     => array(
+                'id'           => 'wooe-payment-icons',
+                'type'         => 'repeater',
+                'title'        => __( 'Payment Icons', 'woo-easy' ),
+                'subtitle'     => __( 'Add or remove payment icons in the footer area. You can sort them by dragging', 'woo-easy' ),
+                'desc'         => __( '', 'woo-easy' ),
+                'item_name'    => 'Payment Icon',
+                'group_values' => true,
+                //'bind_title'   => true,
+                'sortable'     => true,
+                'required'     => array( 'enable-payment-icons', 'equals', 1 ),
+                'fields'       => array(
                     array(
                         'id'       => 'wooe-payment-icon',
                         'type'     => 'media', 
