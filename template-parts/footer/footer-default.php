@@ -98,7 +98,7 @@
 				</div>
 
 				<?php 
-					if( $wooe_options["enable-payment-icons"] == true ) {
+					if( ( $wooe_options["enable-payment-icons"] == true ) && isset( $wooe_options['wooe-payment-icons'] ) ) {
 						get_template_part( "/template-parts/footer/payment", "icons" );
 					}
 				?>

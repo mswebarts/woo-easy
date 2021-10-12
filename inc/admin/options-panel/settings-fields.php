@@ -254,8 +254,8 @@ Redux::set_section( $opt_name, array(
     ) );
     
     Redux::set_section( $opt_name, array(
-        'title'            => esc_html__( 'Footer', 'woo-easy' ),
-        'id'               => 'footer-settings',
+        'title'            => esc_html__( 'Payments Icons', 'woo-easy' ),
+        'id'               => 'footer-payment-settings',
         'desc'             => esc_html__( 'Testing repeater extension', 'woo-easy' ),
         'customizer_width' => '400px',
         'icon'             => 'el el-lines',
@@ -271,12 +271,12 @@ Redux::set_section( $opt_name, array(
                 'id'           => 'wooe-payment-icons',
                 'type'         => 'repeater',
                 'title'        => __( 'Payment Icons', 'woo-easy' ),
-                'subtitle'     => __( 'Add or remove payment icons in the footer area. You can sort them by dragging', 'woo-easy' ),
+                'subtitle'     => __( 'Add or remove payment icons in the footer area.', 'woo-easy' ),
                 'desc'         => __( '', 'woo-easy' ),
                 'item_name'    => 'Payment Icon',
                 'group_values' => true,
                 'bind_title'   => false,
-                'sortable'     => true,
+                'sortable'     => false,
                 'required'     => array( 'enable-payment-icons', 'equals', 1 ),
                 'fields'       => array(
                     array(

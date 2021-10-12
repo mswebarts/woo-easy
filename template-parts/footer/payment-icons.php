@@ -1,8 +1,6 @@
-<?php
-global $wooe_options;
-$payment_icons = $wooe_options['wooe-payment-icons']['wooe-payment-icon'];
-?>
+<?php global $wooe_options; ?>
 
+<?php $payment_icons = $wooe_options['wooe-payment-icons']['wooe-payment-icon']; ?>
 <div class="wooe-footer-payment-icons">
     <ul>
         <?php foreach( $payment_icons as $payment_icon) {
