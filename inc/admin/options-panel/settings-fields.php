@@ -10,7 +10,7 @@ Redux::set_section( $opt_name, array(
     'subsection'       => true,
     'desc'             => esc_html__( 'Custom CSS/JS and other scripts can be added here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-cog'
+    'icon'             => 'el el-css'
 ) );
 Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Accent Colors', 'woo-easy' ),
@@ -71,7 +71,7 @@ Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Header Colors', 'woo-easy' ),
     'desc'             => esc_html__( 'Header settings live here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-lines',
+    'icon'             => 'el el-asterisk',
     'subsection'       => true,
     'fields'           => array(
         array(
@@ -167,7 +167,7 @@ Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Footer Colors', 'woo-easy' ),
     'desc'             => esc_html__( 'Configure the footer related colors here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-lines',
+    'icon'             => 'el el-braille',
     'subsection'       => true,
     'fields'           => array(
         array(
@@ -223,7 +223,7 @@ Redux::set_section( $opt_name, array(
     'id'               => 'header-settings',
     'desc'             => esc_html__( 'Header settings live here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-lines',
+    'icon'             => 'el el-headphones',
     'fields'           => array(
         array(
             'id'       => 'wooe-show-header-search',
@@ -252,8 +252,15 @@ Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Footer', 'woo-easy' ),
     'desc'             => esc_html__( 'You can find all the general footer related settings here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-lines',
+    'icon'             => 'el el-arrow-down',
     'fields'           => array(
+        array(
+            'id'       => 'enable-widget-area',
+            'type'     => 'switch', 
+            'title'    => __('Enable Widget Area', 'woo-easy'),
+            'subtitle' => __('Turn on to enable the widget area', 'woo-easy'),
+            'default'  => true,
+        ),
     )
 ) );
 
@@ -261,7 +268,7 @@ Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Payments Icons', 'woo-easy' ),
     'desc'             => esc_html__( 'Testing repeater extension', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-lines',
+    'icon'             => 'el el-path',
     'subsection'       => true,
     'fields'           => array(
         array(
@@ -275,7 +282,7 @@ Redux::set_section( $opt_name, array(
             'id'           => 'wooe-payment-icons',
             'type'         => 'repeater',
             'title'        => __( 'Payment Icons', 'woo-easy' ),
-            'subtitle'     => __( 'Add or remove payment icons in the footer area.', 'woo-easy' ),
+            'subtitle'     => __( 'Add or remove payment icons in the footer area. Click on Plus icons to expand', 'woo-easy' ),
             'desc'         => __( '', 'woo-easy' ),
             'item_name'    => 'Payment Icon',
             'group_values' => true,
