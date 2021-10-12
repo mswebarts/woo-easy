@@ -276,7 +276,7 @@ Redux::set_section( $opt_name, array(
                 'desc'         => __( '', 'woo-easy' ),
                 'item_name'    => 'Payment Icon',
                 'group_values' => true,
-                //'bind_title'   => true,
+                'bind_title'   => false,
                 'sortable'     => true,
                 'required'     => array( 'enable-payment-icons', 'equals', 1 ),
                 'fields'       => array(

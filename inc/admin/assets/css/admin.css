@@ -204,3 +204,9 @@ label.cb-disable {
 .redux-container .ui-accordion .ui-accordion-header .ui-icon.ui-icon-plus {
 	background-image: url(../images/plus-icon.png);
 }
+span.redux-repeater-header {
+	display: inline-block;
+	color: #fff;
+	text-shadow: none;
+	margin-left: 10px;
+}
