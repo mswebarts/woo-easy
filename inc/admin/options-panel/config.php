@@ -173,7 +173,7 @@ $args = array(
 	'admin_theme'               => 'wp',
 
 	// Enable or disable flyout menus when hovering over a menu with submenus.
-	'flyout_submenus'           => true,
+	'flyout_submenus'           => false,
 
 	// Mode to display fonts (auto|block|swap|fallback|optional)
 	// See: https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display.
