@@ -9,15 +9,9 @@
 			ww = $(window).width(),
 			smw = more.outerWidth();
 
-		menu.children("li").each(function () {
-			var w = $(this).outerWidth();
-			if (w > smw) smw = w + 20;
-			return smw;
-		});
-
 		function contract() {
 			var w = 0,
-				outerWidth = parent.width() - smw - 0;
+				outerWidth = parent.width() - smw;
 			for (i = 0; i < menu.children("li").size(); i++) {
 				w += menu.children("li").eq(i).outerWidth();
 				if (w > outerWidth) {
@@ -37,11 +31,12 @@
 					break;
 				}
 			}
+			console.log(outerWidth);
 		}
 
 		function expand() {
 			var w = 0,
-				outerWidth = parent.width() - smw - 0;
+				outerWidth = parent.width() - smw;
 			menu.children("li").each(function () {
 				w += $(this).outerWidth();
 				return w;
