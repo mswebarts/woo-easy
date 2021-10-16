@@ -379,8 +379,7 @@ ul#wooe-primary-nav {
 	color: var(--wooe-secondary-menu-color);
 	text-align: right;
 }
-.wooe-secondary-nav li:last-child a,
-.wooe-primary-nav li:last-child a {
+.wooe-secondary-nav li:last-child a {
 	padding-right: 0;
 }
 
@@ -814,4 +813,11 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 .wooe-footer-nav li a:hover {
 	color: var(--wooe-footer-menu-hover-color);
 	opacity: 1;
+}
+.wooe-header-nav-left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
 }
