@@ -31,7 +31,7 @@
 											$custom_logo_id = get_theme_mod( 'custom_logo' );
 											$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 											?>
-												<img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo esc_attr( get_bloginfo("name") ); ?>">
+												<img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo sprintf( __( '%1$s', 'woo-easy' ), get_bloginfo('name') ); ?>">
 											<?php
 										}
 									?>
@@ -87,7 +87,7 @@
 											$custom_logo_id = get_theme_mod( 'custom_logo' );
 											$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 											?>
-												<img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo esc_attr( get_bloginfo("name") ); ?>">
+												<img src="<?php echo esc_url($logo[0]); ?>" alt="<?php echo sprintf( __( '%1$s', 'woo-easy' ), get_bloginfo('name') ); ?>">
 											<?php
 										}
 									?>
