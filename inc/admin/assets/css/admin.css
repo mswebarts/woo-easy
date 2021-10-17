@@ -1,5 +1,7 @@
 /* redux framework */
-
+body.toplevel_page_wooe_options {
+	background-color: #23282d;
+}
 body.toplevel_page_wooe_options #redux-header,
 body.toplevel_page_wooe_options #redux-header {
 	background: #0e77e0 !important;
