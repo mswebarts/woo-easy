@@ -1,4 +1,5 @@
 <?php
+// add basic theme supports
 add_action( "after_setup_theme", "woo_add_theme_supports" );
 function woo_add_theme_supports() {
 	add_theme_support( 'title-tag' );
@@ -6,6 +7,7 @@ function woo_add_theme_supports() {
 	add_theme_support( 'custom-logo' );
 }
 
+// register menus
 add_action( 'init', 'wooe_register_nav_menus' );
 function wooe_register_nav_menus() {
 	register_nav_menus(
@@ -65,3 +67,24 @@ function wooe_mobile_menu_fallback() {
 	</ul>
 	<?php
 }
+
+//register widget areas
+function wooe_widget_area_generator($name, $id, $description ){
+    register_sidebar( array(
+        'name' => $name,
+        'id' => $id,
+        'description' => $description,
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_title' => '</h3>',
+    ));
+}
+
+function wooe_widget_area_registration(){
+    wooe_widget_area_generator( 'Footer widget 1', 'footer-sidebar-1', 'Widgets in this area will be displayed in the Footer Widget Area 1' );
+    wooe_widget_area_generator( 'Footer widget 2', 'footer-sidebar-2', 'Widgets in this area will be displayed in the Footer Widget Area 2' );
+    wooe_widget_area_generator( 'Footer widget 3', 'footer-sidebar-3', 'Widgets in this area will be displayed in the Footer Widget Area 3' );
+    wooe_widget_area_generator( 'Footer widget 4', 'footer-sidebar-4', 'Widgets in this area will be displayed in the Footer Widget Area 4' );
+}
+add_action('widgets_init', 'wooe_widget_area_registration');

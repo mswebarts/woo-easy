@@ -4,98 +4,45 @@
 			?>			
 			<div class="wooe-space-above-footer"></div>
 			<footer class="footer wooe-footer-one">
-				<div class="wooe-footer-widget-area">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4">
-								<div class="widget wooe-widget-logo">
-									<img src="assets/img/logo.png" alt="Logo" />
-								</div>
-								<div class="widget wooe-widget-social-media">
-									<ul>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<div class="widget widget-navigation">
-									<h3 class="widgettitle">Customer service</h3>
-									<ul>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-2">
-								<div class="widget widget-navigation">
-									<h3 class="widgettitle">About us</h3>
-									<ul>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-										<li>
-											<a href="#">Menu item one</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="widget wooe-widget-logo">
-									<img src="assets/img/logo.png" alt="Logo" />
-								</div>
-								<div class="widget wooe-widget-social-media">
-									<ul>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-										<li>
-											<a href="#"><i class="fab fa-facebook"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+
+			<?php
+			if( $wooe_options['enable-widget-area'] ) {
+				$layout = $wooe_options['widget-area-layout'];
+
+				switch( $layout ) {
+					case '6x6':
+						get_template_part("/template-parts/footer/widget-layout-6", "6" );
+						break;
+					case '3x3x3x3':
+						get_template_part("/template-parts/footer/widget-layout-3-3-3", "3" );
+						break;
+					case '4x4x4':
+						get_template_part("/template-parts/footer/widget-layout-4-4", "4" );
+						break;
+					case '4x2x2x4':
+						get_template_part("/template-parts/footer/widget-layout-4-2-2", "4" );
+						break;
+					case '6x3x3':
+						get_template_part("/template-parts/footer/widget-layout-6-3", "3" );
+						break;
+					case '3x3x6':
+						get_template_part("/template-parts/footer/widget-layout-3-3", "6" );
+						break;
+					case '3x6x3':
+						get_template_part("/template-parts/footer/widget-layout-3-6", "3" );
+						break;
+					case '4x8':
+						get_template_part("/template-parts/footer/widget-layout-4", "8" );
+						break;
+					case '8x4':
+						get_template_part("/template-parts/footer/widget-layout-8", "4" );
+						break;
+					default :
+						get_template_part("/template-parts/footer/widget-layout-3-3-3", "3" );
+						break;
+				}
+			}
+			?>
 
 				<?php 
 					if( ( $wooe_options["enable-payment-icons"] == true ) && isset( $wooe_options['wooe-payment-icons'] ) ) {

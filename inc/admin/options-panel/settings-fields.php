@@ -261,6 +261,52 @@ Redux::set_section( $opt_name, array(
             'subtitle' => __('Turn on to enable the widget area', 'woo-easy'),
             'default'  => true,
         ),
+        array(
+            'id'       => 'widget-area-layout',
+            'type'     => 'image_select',
+            'required' => array( 'enable-widget-area', 'equals', '1' ),
+            'title'    => __('Widget Area Layout', 'woo-easy'),
+            'subtitle' => __('Select the layout for the widget area', 'woo-easy'),
+            'options'  => array(
+                '6x6'      => array(
+                    'alt'   => '6x6 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/6-6.jpg'
+                ),
+                '3x3x3x3'      => array(
+                    'alt'   => '3x3x3x3 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/3-3-3-3.jpg'
+                ),
+                '4x4x4'      => array(
+                    'alt'   => '4x4x4 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/4-4-4.jpg'
+                ),
+                '4x2x2x4'      => array(
+                    'alt'   => '4x2x2x4 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/4-2-2-4.jpg'
+                ),
+                '6x3x3'      => array(
+                    'alt'   => '6x3x3 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/6-3-3.jpg'
+                ),
+                '3x3x6'      => array(
+                    'alt'   => '3x3x6 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/3-3-6.jpg'
+                ),
+                '3x6x3'      => array(
+                    'alt'   => '3x6x3 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/3-6-3.jpg'
+                ),
+                '4x8'      => array(
+                    'alt'   => '4x8 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/4-8.jpg'
+                ),
+                '8x4'      => array(
+                    'alt'   => '8x4 Columns', 
+                    'img'   => get_template_directory_uri() . '/inc/admin/assets/images/footer/8-4.jpg'
+                ),
+            ),
+            'default'  => '3x3x3x3',
+        ),
     )
 ) );
 
