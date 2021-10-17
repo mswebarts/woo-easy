@@ -3,7 +3,16 @@ Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'General Settings', 'woo-easy' ),
     'desc'             => esc_html__( 'General Theme settings live here', 'woo-easy' ),
     'customizer_width' => '400px',
-    'icon'             => 'el el-cog'
+    'icon'             => 'el el-cog',
+    'fields'           => array(
+        array(
+            'id'          => 'wooe-enable-classic-widget',
+            'type'        => 'switch',
+            'title'       => esc_html__('Enable Classic Widget', 'woo-easy'), 
+            'subtitle'    => esc_html__('Turn on to enable the classic widget editor', 'woo-easy'),
+            'default'     => false,
+        ),
+    ),
 ) );
 Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'CSS/Scripts Related', 'woo-easy' ),

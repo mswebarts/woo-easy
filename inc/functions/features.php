@@ -88,3 +88,22 @@ function wooe_widget_area_registration(){
     wooe_widget_area_generator( 'Footer widget 4', 'footer-sidebar-4', 'Widgets in this area will be displayed in the Footer Widget Area 4' );
 }
 add_action('widgets_init', 'wooe_widget_area_registration');
+
+// disable widget block editor
+/*
+add_action( 'after_setup_theme', 'wooe_enable_classic_widget_editor' );
+function wooe_enable_classic_widget_editor() {
+	global $wooe_options;
+	if( $wooe_options['wooe-enable-classic-widget'] ) {
+		remove_theme_support( 'widgets-block-editor' );
+	}
+}*/
+
+function wooe_enable_classic_widget_editor( $use_widgets_block_editor ) {
+    global $wooe_options;
+	if( $wooe_options['wooe-enable-classic-widget'] ) {
+		return false;
+	}
+    return $use_widgets_block_editor;
+}
+add_filter( 'use_widgets_block_editor', 'wooe_enable_classic_widget_editor' );
