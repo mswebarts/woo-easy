@@ -263,6 +263,71 @@ Redux::set_section( $opt_name, array(
     'icon'             => 'el el-arrow-down',
     'fields'           => array(
         array(
+            'id'       => 'enable-footer-menu',
+            'type'     => 'switch', 
+            'title'    => __('Enable Footer Menu', 'woo-easy'),
+            'subtitle' => __('Turn on to enable the footer menu area in the frontend', 'woo-easy'),
+            'default'  => true,
+        ),
+        array(
+            'id'             => 'wooe-footer-menu-padding',
+            'type'           => 'spacing',
+            'output'         => array('.wooe-footer-nav-container'),
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'units_extended' => 'false',
+            'title'          => __('Footer menu bar padding', 'woo-easy'),
+            'subtitle'       => __('Add padding to the footer menu bar area.', 'woo-easy'),
+            'required'       => array( 'enable-footer-menu', '=', '1' ),
+            'default'            => array(
+                'padding-top'     => '15', 
+                'padding-right'   => '15', 
+                'padding-bottom'  => '15', 
+                'padding-left'    => '15',
+                'units'          => 'px', 
+            )
+        ),
+        array(
+            'id'            => 'wooe-footer-menu-space-between',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Footer menu item spacing', 'woo-easy' ),
+            'desc'          => esc_html__( 'Specify the spacing between footer menu items in px', 'woo-easy' ),
+            'default'       => 20,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 500,
+            'display_value' => 'text',
+            'required' => array( 'enable-footer-menu', '=', '1' ),
+        ),
+        array(
+            'id'       => 'enable-footer-menu-pay-icon-separator',
+            'type'     => 'switch', 
+            'title'    => __('Footer Menu & Payment Icon Separator', 'woo-easy'),
+            'subtitle' => __('Turn on to add a separator between the Footer Menu and the Payment Icon area', 'woo-easy'),
+            'default'  => true,
+        ),
+        array(
+            'id'               => 'wooe-copyright-text',
+            'type'             => 'editor',
+            'title'            => __('Footer Copyright Text', 'woo-easy'), 
+            'subtitle'         => __('Add text for the footer copyright area', 'woo-easy'),
+            'default'          => '©2021 MS Web Arts',
+            'args'   => array(
+                'teeny'            => true,
+                'textarea_rows'    => 10
+            )
+        ),
+    )
+) );
+
+Redux::set_section( $opt_name, array(
+    'title'            => esc_html__( 'Widget Area', 'woo-easy' ),
+    'desc'             => esc_html__( 'You can find all the settings related to footer widget area here', 'woo-easy' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-wrench-alt',
+    'subsection'       => true,
+    'fields'           => array(
+        array(
             'id'       => 'enable-widget-area',
             'type'     => 'switch', 
             'title'    => __('Enable Widget Area', 'woo-easy'),
@@ -316,6 +381,36 @@ Redux::set_section( $opt_name, array(
             'default'  => '3x3x3x3',
         ),
         array(
+            'id'             => 'wooe-footer-widget-area-padding',
+            'type'           => 'spacing',
+            'output'         => array('.wooe-footer-widget-area'),
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'units_extended' => 'false',
+            'title'          => __('Widget area padding', 'woo-easy'),
+            'subtitle'       => __('Add padding to the footer widget area.', 'woo-easy'),
+            'required'       => array( 'enable-widget-area', '=', '1' ),
+            'default'            => array(
+                'padding-top'     => '50', 
+                'padding-right'   => '0', 
+                'padding-bottom'  => '50', 
+                'padding-left'    => '0',
+                'units'          => 'px', 
+            )
+        ),
+        array(
+            'id'            => 'wooe-footer-widget-font-size',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Widget area font size', 'woo-easy' ),
+            'desc'          => esc_html__( 'Select the default font size for the widget area', 'woo-easy' ),
+            'default'       => 14,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 500,
+            'display_value' => 'text',
+            'required' => array( 'enable-widget-area', '=', '1' ),
+        ),
+        array(
             'id'            => 'wooe-footer-widget-spacing',
             'type'          => 'slider',
             'title'         => esc_html__( 'Spacing between widgets', 'woo-easy' ),
@@ -327,63 +422,8 @@ Redux::set_section( $opt_name, array(
             'display_value' => 'text',
             'required' => array( 'enable-widget-area', '=', '1' ),
         ),
-        array(
-            'id'       => 'enable-footer-menu-pay-icon-separator',
-            'type'     => 'switch', 
-            'title'    => __('Footer Menu & Payment Icon Separator', 'woo-easy'),
-            'subtitle' => __('Turn on to add a separator between the Footer Menu and the Payment Icon area', 'woo-easy'),
-            'default'  => true,
-        ),
-        array(
-            'id'       => 'enable-footer-menu',
-            'type'     => 'switch', 
-            'title'    => __('Enable Footer Menu', 'woo-easy'),
-            'subtitle' => __('Turn on to enable the footer menu area in the frontend', 'woo-easy'),
-            'default'  => true,
-        ),
-        array(
-            'id'             => 'wooe-footer-menu-padding',
-            'type'           => 'spacing',
-            'output'         => array('.wooe-footer-nav-container'),
-            'mode'           => 'padding',
-            'units'          => array('em', 'px'),
-            'units_extended' => 'false',
-            'title'          => __('Footer menu bar padding', 'woo-easy'),
-            'subtitle'       => __('Add padding to the footer menu bar area.', 'woo-easy'),
-            'required'       => array( 'enable-footer-menu', '=', '1' ),
-            'default'            => array(
-                'padding-top'     => '15', 
-                'padding-right'   => '15', 
-                'padding-bottom'  => '15', 
-                'padding-left'    => '15',
-                'units'          => 'px', 
-            )
-        ),
-        array(
-            'id'            => 'wooe-footer-menu-space-between',
-            'type'          => 'slider',
-            'title'         => esc_html__( 'Footer menu item spacing', 'woo-easy' ),
-            'desc'          => esc_html__( 'Specify the spacing between footer menu items in px', 'woo-easy' ),
-            'default'       => 20,
-            'min'           => 1,
-            'step'          => 1,
-            'max'           => 500,
-            'display_value' => 'text',
-            'required' => array( 'enable-footer-menu', '=', '1' ),
-        ),
-        array(
-            'id'               => 'wooe-copyright-text',
-            'type'             => 'editor',
-            'title'            => __('Footer Copyright Text', 'woo-easy'), 
-            'subtitle'         => __('Add text for the footer copyright area', 'woo-easy'),
-            'default'          => '©2021 MS Web Arts',
-            'args'   => array(
-                'teeny'            => true,
-                'textarea_rows'    => 10
-            )
-        ),
-    )
-) );
+    ),
+));
 
 Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Payments Icons', 'woo-easy' ),

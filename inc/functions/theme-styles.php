@@ -99,11 +99,7 @@ function wooe_dynamic_css() {
 			margin-top: <?php echo esc_html( $wooe_options['wooe-footer-widget-spacing'] ) ?>px;
 		}
 		.wooe-footer-widget-area {
-			padding-top: 50px;
-			padding-right: 0;
-			padding-bottom: 50px;
-			padding-left: 0;
-			font-size: 14px;
+			font-size: <?php echo esc_html( $wooe_options['wooe-footer-widget-font-size'] ) ?>px;;
 		}
 		.footer .widgettitle {
 			font-size: 18px;
