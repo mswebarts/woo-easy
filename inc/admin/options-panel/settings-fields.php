@@ -75,7 +75,6 @@ Redux::set_section( $opt_name, array(
     ),
 ) );
 
-
 Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'Header Colors', 'woo-easy' ),
     'desc'             => esc_html__( 'Header settings live here', 'woo-easy' ),
@@ -251,7 +250,7 @@ Redux::set_section( $opt_name, array(
             'min'           => 1,
             'step'          => 1,
             'max'           => 500,
-            'display_value' => 'label',
+            'display_value' => 'text',
             'required' => array( 'wooe-show-header-search', '=', '1' ),
         ),
     )
