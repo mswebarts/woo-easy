@@ -263,6 +263,15 @@ Redux::set_section( $opt_name, array(
     'icon'             => 'el el-arrow-down',
     'fields'           => array(
         array(
+            'id'       => 'wooe-footer-full-width',
+            'type'     => 'switch', 
+            'title'    => __('Footer width', 'woo-easy'),
+            'subtitle' => __('Select what should be the width of the footer area', 'woo-easy'),
+            'on'       => __('Full width', 'woo-easy'),
+            'off'      => __('Boxed width', 'woo-easy'),
+            'default'  => false,
+        ),
+        array(
             'id'       => 'enable-footer-menu',
             'type'     => 'switch', 
             'title'    => __('Enable Footer Menu', 'woo-easy'),

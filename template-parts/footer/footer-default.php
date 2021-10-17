@@ -1,11 +1,11 @@
 			<?php
 			global $wooe_options;
-			
+			$footer_width = ( $wooe_options["wooe-footer-full-width"] ) ? "container-fluid" : "container";
 			?>			
 			<div class="wooe-space-above-footer"></div>
 			<footer class="footer wooe-footer-one">
 				<div class="wooe-footer-widget-area">
-					<div class="container">
+					<div class="<?php echo esc_attr( $footer_width ); ?>">
 						<div class="row">
 							<?php 
 							if( $wooe_options['enable-widget-area'] ) {
