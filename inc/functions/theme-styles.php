@@ -131,10 +131,6 @@ function wooe_dynamic_css() {
 		/* footer menu */
 
 		.wooe-footer-nav-container {
-			padding-top: 15px;
-			padding-right: 15px;
-			padding-bottom: 15px;
-			padding-left: 15px;
 			background-color: <?php echo esc_html( $wooe_options['wooe-footer-menu-bg'] ) ?>;
 		}
 		.wooe-footer-nav li {

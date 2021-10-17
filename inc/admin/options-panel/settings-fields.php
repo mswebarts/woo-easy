@@ -328,6 +328,23 @@ Redux::set_section( $opt_name, array(
             'required' => array( 'enable-widget-area', '=', '1' ),
         ),
         array(
+            'id'             => 'wooe-footer-menu-padding',
+            'type'           => 'spacing',
+            'output'         => array('.wooe-footer-nav-container'),
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'units_extended' => 'false',
+            'title'          => __('Footer menu bar padding', 'woo-easy'),
+            'subtitle'       => __('Add padding to the footer menu bar area.', 'woo-easy'),
+            'default'            => array(
+                'padding-top'     => '15', 
+                'padding-right'   => '15', 
+                'padding-bottom'  => '15', 
+                'padding-left'    => '15',
+                'units'          => 'px', 
+            )
+        ),
+        array(
             'id'               => 'wooe-copyright-text',
             'type'             => 'editor',
             'title'            => __('Footer Copyright Text', 'woo-easy'), 
