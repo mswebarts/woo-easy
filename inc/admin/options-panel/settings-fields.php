@@ -375,9 +375,9 @@ Redux::set_section( $opt_name, array(
             'output'   => array('.wooe-footer-payment-icons img'),
             'units'    => array( 'em','px' ),
             'width'    => false,
-            'title'    => __('Payment Icon Width', 'woo-easy'),
-            'subtitle' => __('Set width for the icons', 'woo-easy'),
-            'desc'     => __( 'The height of the icon will be set to \'auto\' to keep the proportion of the icon'),
+            'title'    => __('Payment Icon Height', 'woo-easy'),
+            'subtitle' => __('Set height for the icons', 'woo-easy'),
+            'desc'     => __( 'The width of the icon will be set to \'auto\' to keep the proportion of the icon'),
             'required' => array( 'enable-payment-icons', 'equals', 1 ),
             'default'  => array(
                 'height'  => '40',
