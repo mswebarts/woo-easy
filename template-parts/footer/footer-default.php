@@ -1,6 +1,6 @@
 			<?php
 			global $wooe_options;
-			$footer_width = ( $wooe_options["wooe-footer-full-width"] ) ? "container-fluid" : "container";
+			$footer_width = ( $wooe_options["wooe-footer-widget-width"] ) ? "container-fluid" : "container";
 			?>			
 			<div class="wooe-space-above-footer"></div>
 			<footer class="footer wooe-footer-one">
@@ -45,36 +45,36 @@
 								}
 							}
 							?>
-
-							<?php 
-								if( ( $wooe_options["enable-payment-icons"] == true ) && isset( $wooe_options['wooe-payment-icons'] ) ) {
-									get_template_part( "/template-parts/footer/payment", "icons" );
-								}
-							?>
-
-							<?php if( $wooe_options["enable-footer-menu-pay-icon-separator"] ) : ?>
-								<hr />
-							<?php endif; ?>
-
-							<?php if( $wooe_options["enable-footer-menu"] ) : ?>
-								<div class="wooe-footer-nav-container">
-									<?php
-										$args = array(
-											"theme_location" => "footer-menu",
-											"container"      => false,
-											"menu_class"     => "wooe-footer-nav",
-											"fallback_cb"    => false
-										);
-										wp_nav_menu( $args );
-									?>
-									<div class="wooe-copyright-text d-inline-block">
-										<?php echo esc_html_e( $wooe_options['wooe-copyright-text'], "woo-easy" ); ?>
-									</div>
-								</div>
-							<?php endif; ?>
 						</div>
 					</div>
 				</div>
+
+				<?php 
+					if( ( $wooe_options["enable-payment-icons"] == true ) && isset( $wooe_options['wooe-payment-icons'] ) ) {
+						get_template_part( "/template-parts/footer/payment", "icons" );
+					}
+				?>
+
+				<?php if( $wooe_options["enable-footer-menu-pay-icon-separator"] ) : ?>
+					<hr />
+				<?php endif; ?>
+
+				<?php if( $wooe_options["enable-footer-menu"] ) : ?>
+					<div class="wooe-footer-nav-container">
+						<?php
+							$args = array(
+								"theme_location" => "footer-menu",
+								"container"      => false,
+								"menu_class"     => "wooe-footer-nav",
+								"fallback_cb"    => false
+							);
+							wp_nav_menu( $args );
+						?>
+						<div class="wooe-copyright-text d-inline-block">
+							<?php echo esc_html_e( $wooe_options['wooe-copyright-text'], "woo-easy" ); ?>
+						</div>
+					</div>
+				<?php endif; ?>
 			</footer>
 		</div>
 		<?php wp_footer(); ?>

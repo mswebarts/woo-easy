@@ -263,15 +263,6 @@ Redux::set_section( $opt_name, array(
     'icon'             => 'el el-arrow-down',
     'fields'           => array(
         array(
-            'id'       => 'wooe-footer-full-width',
-            'type'     => 'switch', 
-            'title'    => __('Footer width', 'woo-easy'),
-            'subtitle' => __('Select what should be the width of the footer area', 'woo-easy'),
-            'on'       => __('Full width', 'woo-easy'),
-            'off'      => __('Boxed width', 'woo-easy'),
-            'default'  => false,
-        ),
-        array(
             'id'       => 'enable-footer-menu',
             'type'     => 'switch', 
             'title'    => __('Enable Footer Menu', 'woo-easy'),
@@ -344,11 +335,22 @@ Redux::set_section( $opt_name, array(
             'default'  => true,
         ),
         array(
+            'id'       => 'wooe-footer-widget-width',
+            'type'     => 'switch', 
+            'title'    => __('Widget area width', 'woo-easy'),
+            'subtitle' => __('Select what should be the width of the footer widget area content', 'woo-easy'),
+            'on'       => __('Full width', 'woo-easy'),
+            'off'      => __('Boxed width', 'woo-easy'),
+            'required' => array( 'enable-widget-area', '=', '1' ),
+            'default'  => false,
+        ),
+        array(
             'id'       => 'widget-area-layout',
             'type'     => 'image_select',
             'required' => array( 'enable-widget-area', 'equals', '1' ),
             'title'    => __('Widget Area Layout', 'woo-easy'),
             'subtitle' => __('Select the layout for the widget area', 'woo-easy'),
+            'required' => array( 'enable-widget-area', '=', '1' ),
             'options'  => array(
                 '6x6'      => array(
                     'alt'   => '6x6 Columns', 
