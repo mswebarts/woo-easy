@@ -407,7 +407,7 @@ Redux::set_section( $opt_name, array(
                     'desc'     => __('Upload the icon or image. Transparent image in PNG format is recommended.', 'woo-easy'),
                     'subtitle' => __('', 'woo-easy'),
                     'default'  => array(
-                        'url'=>'http://s.wordpress.org/style/images/codeispoetry.png'
+                        'url'=> get_template_directory_uri() . '/inc/admin/assets/images/footer/visa.png'
                     ),
                 ),
             )
