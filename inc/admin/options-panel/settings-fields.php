@@ -307,6 +307,18 @@ Redux::set_section( $opt_name, array(
             ),
             'default'  => '3x3x3x3',
         ),
+        array(
+            'id'            => 'wooe-footer-widget-spacing',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Spacing between widgets', 'woo-easy' ),
+            'desc'          => esc_html__( 'Specify the spacing between widgets in the footer in pixel unit', 'woo-easy' ),
+            'default'       => 30,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 500,
+            'display_value' => 'text',
+            'required' => array( 'enable-widget-area', '=', '1' ),
+        ),
     )
 ) );
 
