@@ -112,17 +112,11 @@ function wooe_dynamic_css() {
 		.wooe-footer-widget-area a {
 			color: #000000;
 		}
-		.wooe-footer-widget-area a:hover {
-			opacity: 0.8;
-		}
 		.wooe-footer-payment-icons {
 			background-color: <?php echo esc_html( $wooe_options['wooe-footer-payment-bg'] ) ?>;
 		}
 		.wooe-footer-payment-icons ul li {
 			margin-right: <?php echo esc_html( $wooe_options['wooe-payment-icon-spacing'] ) ?>px;
-		}
-		.wooe-footer-payment-icons img {
-			width: auto;
 		}
 		.wooe-footer-payment-icons ul {
 			justify-content: <?php echo esc_html( $wooe_options['wooe-payment-icon-alignment'] ) ?>;

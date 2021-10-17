@@ -742,6 +742,9 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 .wooe-footer-widget-area {
 	background-color: var(--wooe-footer-widget-bg);
 }
+.wooe-footer-widget-area a:hover {
+	opacity: 0.8;
+}
 .wooe-widget-logo img {
 	width: 50px;
 	height: auto;
@@ -784,6 +787,9 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 }
 .wooe-footer-payment-icons ul li:last-child {
 	margin-right: 0;
+}
+.wooe-footer-payment-icons img {
+	width: auto;
 }
 
 /* footer menu */
