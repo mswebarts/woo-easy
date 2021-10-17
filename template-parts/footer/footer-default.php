@@ -4,7 +4,6 @@
 			?>			
 			<div class="wooe-space-above-footer"></div>
 			<footer class="footer wooe-footer-one">
-
 				<?php
 				if( $wooe_options['enable-widget-area'] ) {
 					$layout = $wooe_options['widget-area-layout'];
@@ -49,25 +48,25 @@
 						get_template_part( "/template-parts/footer/payment", "icons" );
 					}
 				?>
-				
 				<hr />
-				<div class="wooe-footer-nav-container">
-					<?php
-						$args = array(
-							"theme_location" => "footer-menu",
-							"container"      => false,
-							"menu_class"     => "wooe-footer-nav",
-							"fallback_cb"    => false
-						);
-						wp_nav_menu( $args );
-					?>
-					<div class="wooe-copyright-text d-inline-block">
-						<?php echo esc_html_e( $wooe_options['wooe-copyright-text'], "woo-easy" ); ?>
+				<?php if( $wooe_options["enable-footer-menu"] ) : ?>
+					<div class="wooe-footer-nav-container">
+						<?php
+							$args = array(
+								"theme_location" => "footer-menu",
+								"container"      => false,
+								"menu_class"     => "wooe-footer-nav",
+								"fallback_cb"    => false
+							);
+							wp_nav_menu( $args );
+						?>
+						<div class="wooe-copyright-text d-inline-block">
+							<?php echo esc_html_e( $wooe_options['wooe-copyright-text'], "woo-easy" ); ?>
+						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 			</footer>
 		</div>
-
 		<?php wp_footer(); ?>
 	</body>
 </html>

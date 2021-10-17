@@ -328,6 +328,13 @@ Redux::set_section( $opt_name, array(
             'required' => array( 'enable-widget-area', '=', '1' ),
         ),
         array(
+            'id'       => 'enable-footer-menu',
+            'type'     => 'switch', 
+            'title'    => __('Enable Footer Menu', 'woo-easy'),
+            'subtitle' => __('Turn on to enable the footer menu area in the frontend', 'woo-easy'),
+            'default'  => true,
+        ),
+        array(
             'id'             => 'wooe-footer-menu-padding',
             'type'           => 'spacing',
             'output'         => array('.wooe-footer-nav-container'),
@@ -336,6 +343,7 @@ Redux::set_section( $opt_name, array(
             'units_extended' => 'false',
             'title'          => __('Footer menu bar padding', 'woo-easy'),
             'subtitle'       => __('Add padding to the footer menu bar area.', 'woo-easy'),
+            'required'       => array( 'enable-footer-menu', '=', '1' ),
             'default'            => array(
                 'padding-top'     => '15', 
                 'padding-right'   => '15', 
