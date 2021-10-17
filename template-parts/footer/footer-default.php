@@ -61,7 +61,9 @@
 						);
 						wp_nav_menu( $args );
 					?>
-					<span class="wooe-copyright-text">©2021 MS Web Arts</span>
+					<div class="wooe-copyright-text d-inline-block">
+						<?php echo esc_html_e( $wooe_options['wooe-copyright-text'], "woo-easy" ); ?>
+					</div>
 				</div>
 			</footer>
 		</div>

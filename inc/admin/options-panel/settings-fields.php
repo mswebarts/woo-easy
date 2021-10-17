@@ -327,6 +327,17 @@ Redux::set_section( $opt_name, array(
             'display_value' => 'text',
             'required' => array( 'enable-widget-area', '=', '1' ),
         ),
+        array(
+            'id'               => 'wooe-copyright-text',
+            'type'             => 'editor',
+            'title'            => __('Footer Copyright Text', 'woo-easy'), 
+            'subtitle'         => __('Add text for the footer copyright area', 'woo-easy'),
+            'default'          => '©2021 MS Web Arts',
+            'args'   => array(
+                'teeny'            => true,
+                'textarea_rows'    => 10
+            )
+        ),
     )
 ) );
 
@@ -377,7 +388,7 @@ Redux::set_section( $opt_name, array(
             'width'    => false,
             'title'    => __('Payment Icon Height', 'woo-easy'),
             'subtitle' => __('Set height for the icons', 'woo-easy'),
-            'desc'     => __( 'The width of the icon will be set to \'auto\' to keep the proportion of the icon'),
+            'desc'     => __( 'The width of the icon will be set to \'auto\' to keep the proportion of the icon', 'woo-easy' ),
             'required' => array( 'enable-payment-icons', 'equals', 1 ),
             'default'  => array(
                 'height'  => '40',
