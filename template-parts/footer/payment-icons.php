@@ -9,7 +9,7 @@
             ?>
 
             <li>
-                <img src="<?php echo esc_url( $payment_icon['url'] ); ?>" alt="<?php echo esc_attr_e( $alt_text, 'woo-easy' ); ?>">
+                <img src="<?php echo esc_url( $payment_icon['url'] ); ?>" alt="<?php echo esc_attr( $alt_text ); ?>">
             </li>
 
         <?php } ?>
