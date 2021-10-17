@@ -360,6 +360,18 @@ Redux::set_section( $opt_name, array(
             )
         ),
         array(
+            'id'            => 'wooe-footer-menu-space-between',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Footer menu item spacing', 'woo-easy' ),
+            'desc'          => esc_html__( 'Specify the spacing between footer menu items in px', 'woo-easy' ),
+            'default'       => 20,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 500,
+            'display_value' => 'text',
+            'required' => array( 'enable-footer-menu', '=', '1' ),
+        ),
+        array(
             'id'               => 'wooe-copyright-text',
             'type'             => 'editor',
             'title'            => __('Footer Copyright Text', 'woo-easy'), 

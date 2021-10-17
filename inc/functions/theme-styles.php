@@ -134,7 +134,7 @@ function wooe_dynamic_css() {
 			background-color: <?php echo esc_html( $wooe_options['wooe-footer-menu-bg'] ) ?>;
 		}
 		.wooe-footer-nav li {
-			margin-right: 20px; /*space between menus*/
+			margin-right: <?php echo esc_html( $wooe_options['wooe-footer-menu-space-between'] ) ?>px;
 		}
 	</style>
 <?php }

@@ -798,7 +798,6 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 }
 .wooe-footer-nav li {
 	display: inline-block;
-	margin-right: 20px;
 }
 .wooe-footer-nav li:last-child() {
 	margin-right: 0;
