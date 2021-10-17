@@ -328,6 +328,13 @@ Redux::set_section( $opt_name, array(
             'required' => array( 'enable-widget-area', '=', '1' ),
         ),
         array(
+            'id'       => 'enable-footer-menu-pay-icon-separator',
+            'type'     => 'switch', 
+            'title'    => __('Footer Menu & Payment Icon Separator', 'woo-easy'),
+            'subtitle' => __('Turn on to add a separator between the Footer Menu and the Payment Icon area', 'woo-easy'),
+            'default'  => true,
+        ),
+        array(
             'id'       => 'enable-footer-menu',
             'type'     => 'switch', 
             'title'    => __('Enable Footer Menu', 'woo-easy'),

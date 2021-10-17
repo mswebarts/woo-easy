@@ -48,7 +48,11 @@
 						get_template_part( "/template-parts/footer/payment", "icons" );
 					}
 				?>
-				<hr />
+
+				<?php if( $wooe_options["enable-footer-menu-pay-icon-separator"] ) : ?>
+					<hr />
+				<?php endif; ?>
+
 				<?php if( $wooe_options["enable-footer-menu"] ) : ?>
 					<div class="wooe-footer-nav-container">
 						<?php
