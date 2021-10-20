@@ -313,6 +313,23 @@ Redux::set_section( $opt_name, array(
     'icon'             => 'el el-headphones',
     'fields'           => array(
         array(
+            'id'             => 'wooe-logo-bar-padding',
+            'type'           => 'spacing',
+            'output'         => array('.wooe-header-mid'),
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'units_extended' => 'false',
+            'title'          => __('Logo bar padding', 'woo-easy'),
+            'subtitle'       => __('Add padding to the header logo bar', 'woo-easy'),
+            'default'            => array(
+                'padding-top'     => '15',
+                'padding-bottom'  => '15',
+                'padding-left'    => '0',
+                'padding-right'   => '0',
+                'units'           => 'px', 
+            )
+        ),
+        array(
             'id'       => 'wooe-show-header-search',
             'type'     => 'switch',
             'title'    => esc_html__( 'Show Search field', 'woo-easy' ),
@@ -321,14 +338,14 @@ Redux::set_section( $opt_name, array(
             'default'  => true,
         ),
         array(
-            'id'            => 'wooe-header-bar-height',
+            'id'            => 'wooe-header-search-height',
             'type'          => 'slider',
-            'title'         => esc_html__( 'Header bar height', 'woo-easy' ),
-            'desc'          => esc_html__( 'Specify header bar height in px', 'woo-easy' ),
-            'default'       => 50,
+            'title'         => esc_html__( 'Header search height', 'woo-easy' ),
+            'desc'          => esc_html__( 'Specify header search input height in px', 'woo-easy' ),
+            'default'       => 40,
             'min'           => 1,
             'step'          => 1,
-            'max'           => 500,
+            'max'           => 100,
             'display_value' => 'text',
             'required' => array( 'wooe-show-header-search', '=', '1' ),
         ),
