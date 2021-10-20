@@ -315,7 +315,7 @@ Redux::set_section( $opt_name, array(
         array(
             'id'             => 'wooe-logo-bar-padding',
             'type'           => 'spacing',
-            'output'         => array('.wooe-header-mid'),
+            'output'         => array('.wooe-header-mid .row'),
             'mode'           => 'padding',
             'units'          => array('em', 'px'),
             'units_extended' => 'false',
