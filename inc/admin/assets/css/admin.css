@@ -199,3 +199,6 @@ body.toplevel_page_wooe_options .redux-main .redux-action_bar input {
 body.toplevel_page_wooe_options .redux-main .redux-action_bar input:last-child {
 	margin-right: 0;
 }
+body.toplevel_page_wooe_options .redux-container .redux-main .input-prepend i {
+	color: #333333;
+}
