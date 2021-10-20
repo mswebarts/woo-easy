@@ -368,6 +368,17 @@ Redux::set_section( $opt_name, array(
     'icon'             => 'el el-arrow-down',
     'fields'           => array(
         array(
+            'id'            => 'wooe-spacing-above-footer',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Empty space above footer', 'woo-easy' ),
+            'desc'          => esc_html__( 'Add some space above footer globally', 'woo-easy' ),
+            'default'       => 40,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 1000,
+            'display_value' => 'text',
+        ),
+        array(
             'id'       => 'wooe-footer-show-general-info',
             'type'     => 'switch', 
             'title'    => __('Show General Info', 'woo-easy'),
