@@ -534,7 +534,7 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 }
 
 /* header bottom */
-.wooe-header-bottom-info {
+.wooe-general-info {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -544,7 +544,7 @@ ul.wooe-primary-nav-subfilter li a:hover + .sub-menu {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
-.wooe-header-bottom-info .wooe-header-bottom-info-item i {
+.wooe-general-info .wooe-general-info-item i {
 	color: var(--wooe-secondary-color);
 }
 

@@ -67,13 +67,13 @@ function wooe_dynamic_css() {
 		<?php endif; ?>
 
 		/* header bottom */
-		.wooe-header-bottom-info {
+		.wooe-general-info {
 			font-size: 14px;
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
 
-		.wooe-header-bottom-info .wooe-header-bottom-info-item {
+		.wooe-general-info .wooe-general-info-item {
 			padding: 0 10px;
 			width: auto;
 		}

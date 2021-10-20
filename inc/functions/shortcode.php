@@ -1,4 +1,4 @@
 <?php
 
-// call for vc shortcodes
+// call for shortcodes
 

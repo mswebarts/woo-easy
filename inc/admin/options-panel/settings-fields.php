@@ -12,6 +12,34 @@ Redux::set_section( $opt_name, array(
             'subtitle'    => esc_html__('Turn on to enable the classic widget editor', 'woo-easy'),
             'default'     => false,
         ),
+        array(
+            'id'          => 'wooe-general-info',
+            'type'        => 'repeater',
+            'title'       => esc_html__('General Info Fields', 'woo-easy'), 
+            'subtitle'    => esc_html__('Add multiple general info. This can be enabled in header, footer and other configured areas', 'woo-easy'),
+            'item_name'    => 'Info',
+            'group_values' => true,
+            'bind_title'   => false,
+            'sortable'     => false,
+            'fields'       => array(
+                array(
+                    'id'       => 'wooe-general-info-icon',
+                    'type'     => 'text', 
+                    'title'    => __('Info Icon', 'woo-easy'),
+                    'desc'     => __('Add a font awesome 5 icon class to display as icon i.e. "fas fa-truck"', 'woo-easy'),
+                    'subtitle' => __('', 'woo-easy'),
+                    'default'  => "fas fa-check-circle"
+                ),
+                array(
+                    'id'       => 'wooe-general-info-text',
+                    'type'     => 'text', 
+                    'title'    => __('Info Text', 'woo-easy'),
+                    'desc'     => __('Add the info you want to add', 'woo-easy'),
+                    'subtitle' => __('', 'woo-easy'),
+                    'default'  => "i.e. Free returns"
+                ),
+            )
+        ),
     ),
 ) );
 Redux::set_section( $opt_name, array(
