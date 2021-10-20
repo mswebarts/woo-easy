@@ -77,6 +77,13 @@ function wooe_dynamic_css() {
 			width: auto;
 		}
 
+		/**********************************
+					HTML Elements
+		***********************************/
+		hr {
+			background-color: #ada6a6;
+		}
+
 		/* default section heading */
 
 		.wooe-section-heading {
@@ -92,7 +99,7 @@ function wooe_dynamic_css() {
 		*************************************/
 		.wooe-space-above-footer {
 			display: block;
-			height: 40px;
+			height: <?php echo esc_html( $wooe_options['wooe-spacing-above-footer'] ) ?>px;;
 		}
 		.footer .widget:not(:first-child) {
 			margin-top: <?php echo esc_html( $wooe_options['wooe-footer-widget-spacing'] ) ?>px;
