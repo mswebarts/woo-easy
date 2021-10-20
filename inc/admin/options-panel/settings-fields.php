@@ -12,6 +12,15 @@ Redux::set_section( $opt_name, array(
             'subtitle'    => esc_html__('Turn on to enable the classic widget editor', 'woo-easy'),
             'default'     => false,
         ),
+    ),
+) );
+Redux::set_section( $opt_name, array(
+    'title'            => esc_html__( 'Info Fields', 'woo-easy' ),
+    'desc'             => esc_html__( 'Add additional information here', 'woo-easy' ),
+    'customizer_width' => '400px',
+    'icon'             => 'el el-info-circle',
+    'subsection'       => true,
+    'fields'           => array(
         array(
             'id'          => 'wooe-general-info',
             'type'        => 'repeater',
@@ -34,14 +43,56 @@ Redux::set_section( $opt_name, array(
                     'id'       => 'wooe-general-info-text',
                     'type'     => 'text', 
                     'title'    => __('Info Text', 'woo-easy'),
-                    'desc'     => __('Add the info you want to add', 'woo-easy'),
+                    'desc'     => __('Add the info you want to add. Allowed HTML tags are "b,i,u,del"', 'woo-easy'),
                     'subtitle' => __('', 'woo-easy'),
-                    'default'  => "i.e. Free returns"
+                    'default'  => "i.e. Free returns",
                 ),
             )
         ),
-    ),
-) );
+        array(
+            'id'             => 'wooe-general-info-padding',
+            'type'           => 'spacing',
+            'output'         => array('.wooe-general-info'),
+            'mode'           => 'padding',
+            'units'          => array('em', 'px'),
+            'units_extended' => 'false',
+            'title'          => __('General Info area padding', 'woo-easy'),
+            'subtitle'       => __('Add padding to the general info area', 'woo-easy'),
+            'left'  => false,
+            'right'  => false,
+            'default'            => array(
+                'padding-top'     => '15',
+                'padding-bottom'  => '15',
+                'units'          => 'px', 
+            )
+        ),
+        array(
+            'id'       => 'wooe-general-info-alignment',
+            'type'     => 'select',
+            'title'    => __('Select Option', 'woo-easy'), 
+            'subtitle' => __('Select how the info should be aligned', 'woo-easy'),
+            'desc'     => __('This is the description field, again good for additional info.', 'woo-easy'),
+            // Must provide key => value pairs for select options
+            'options'  => array(
+                'left' => 'Left',
+                'center' => 'Center',
+                'right' => 'Right'
+            ),
+            'default'  => 'center',
+        ),
+        array(
+            'id'            => 'wooe-general-info-fontsize',
+            'type'          => 'slider',
+            'title'         => esc_html__( 'Font size', 'woo-easy' ),
+            'desc'          => esc_html__( 'Select the font size for this section in pixel', 'woo-easy' ),
+            'default'       => 14,
+            'min'           => 1,
+            'step'          => 1,
+            'max'           => 100,
+            'display_value' => 'text',
+        ),
+    )
+));
 Redux::set_section( $opt_name, array(
     'title'            => esc_html__( 'CSS/Scripts Related', 'woo-easy' ),
     'subsection'       => true,
@@ -281,6 +332,15 @@ Redux::set_section( $opt_name, array(
             'display_value' => 'text',
             'required' => array( 'wooe-show-header-search', '=', '1' ),
         ),
+        array(
+            'id'       => 'wooe-header-show-general-info',
+            'type'     => 'switch', 
+            'title'    => __('Show General Info', 'woo-easy'),
+            'subtitle' => __('Turn on to show General Info from General tab below the header', 'woo-easy'),
+            'on'       => __('On', 'woo-easy'),
+            'off'      => __('Off', 'woo-easy'),
+            'default'  => true,
+        ),
     )
 ) );
 
@@ -290,6 +350,15 @@ Redux::set_section( $opt_name, array(
     'customizer_width' => '400px',
     'icon'             => 'el el-arrow-down',
     'fields'           => array(
+        array(
+            'id'       => 'wooe-footer-show-general-info',
+            'type'     => 'switch', 
+            'title'    => __('Show General Info', 'woo-easy'),
+            'subtitle' => __('Turn on to show General Info from General tab above the footer', 'woo-easy'),
+            'on'       => __('On', 'woo-easy'),
+            'off'      => __('Off', 'woo-easy'),
+            'default'  => true,
+        ),
         array(
             'id'       => 'enable-footer-menu',
             'type'     => 'switch', 

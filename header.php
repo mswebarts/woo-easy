@@ -185,6 +185,19 @@
 					?>
 				</nav>
 
-				<?php get_template_part( "/template-parts/templates/general", "info" ); ?>
+				<?php
+					if( $wooe_options['wooe-header-show-general-info'] ) {
+						?>
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+									<?php get_template_part( "/template-parts/templates/general", "info" ); ?>
+								</div>
+							</div>
+						</div>
+
+						<?php
+					}
+				?>
                 
 			</header>

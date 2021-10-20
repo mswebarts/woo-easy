@@ -66,11 +66,12 @@ function wooe_dynamic_css() {
 		}
 		<?php endif; ?>
 
-		/* header bottom */
+		/* General Info */
 		.wooe-general-info {
-			font-size: 14px;
-			padding-top: 10px;
-			padding-bottom: 10px;
+			font-size: <?php echo $wooe_options['wooe-general-info-fontsize']; ?>px;
+			-webkit-box-pack: <?php echo $wooe_options['wooe-general-info-alignment']; ?>;
+			-ms-flex-pack: <?php echo $wooe_options['wooe-general-info-alignment']; ?>;
+			justify-content: <?php echo $wooe_options['wooe-general-info-alignment']; ?>;
 		}
 
 		.wooe-general-info .wooe-general-info-item {
