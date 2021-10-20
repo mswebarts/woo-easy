@@ -171,6 +171,7 @@
 						</div>
 					</div>
 				</div>
+				<hr />
 
 				<nav class="wooe-header-nav-mbl" id="wooe-header-nav-mbl">
 					<?php

@@ -330,9 +330,6 @@ input[type="color"]:focus,
 
 /* header navigation */
 
-.wooe-header-nav {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
 .wooe-header-nav-mbl:not(.mm-menu_opened) {
 	list-style-type: none;
 	display: none;

@@ -3,7 +3,7 @@
 			$footer_width = ( $wooe_options["wooe-footer-widget-width"] ) ? "container-fluid" : "container";
 			?>			
 			<div class="wooe-space-above-footer"></div>
-            
+			<hr>
             <?php
 				if( $wooe_options['wooe-header-show-general-info'] ) {
 					?>
